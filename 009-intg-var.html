@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergrtion JS</title>
+</head>
+<body>
+    <script>
+        // завдання з послідовністью рядків
+        let x = 6;
+        let y = 14;
+        let z = 4;
+
+        // z - x++ + y * 5
+        // спочатку x++ стає x (7)
+        let step1 = x++; 
+        console.log("step1 x++:", step1, "(поточне x =", x, ")");
+
+        // потім йде вираз y * 5, 70
+        let step2 = y * 5;
+        console.log("step2 (y * 5) =", step2);
+
+        // потім йде вираз z - step1 (4 - 6 = -2)
+        let step3 = z - step1; 
+        console.log("step3 - z - (початкове x):", step3);
+
+        // Додавання результатів step3 + step2 (68)
+        let result = step3 + step2; 
+        console.log("step4 - Результат:", result);
+    </script>
+</body>
+</html>

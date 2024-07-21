@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergrtion JS</title>
+</head>
+<body>
+    <script>
+        // завдання 5
+        let x = 6;
+        let y = 14;
+        let z = 4;
+
+    x = (x + y) - z; // x = (6 + 14) - 4 = 16 -`()` круглі дужки мають пріоритет виконанная операції.
+    console.log("x після першої операції:", x);
+
+    y = (y * z) / x; // y = (14 * 4) / 16 = 3.5
+    console.log("y після другої операції:", y);
+
+    z = x ** 2; // z = 16 ** 2 = 256 `**` оператор піднесення до степені в пріоритеті. 
+    console.log("z після третьої операції:", z);
+
+    x = z % y; // x = 256 % 3.5 = 0.5
+    console.log("x після четвертої операції:", x);
+
+    y = (x + y) * z - (y / x); // y = (0.5 + 3.5) * 256 - (3.5 / 1.5) Приблизно 1021.6667. спочатку йде піднесення (x+y) та (y/x); потім йде (x+y*z); тільки потім йде `-`.
+    console.log("y після п'ятої операції:", y);
+    </script>
+</body>
+</html>

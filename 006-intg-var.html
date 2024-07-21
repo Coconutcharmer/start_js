@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergrtion JS</title>
+</head>
+<body>
+    <script>
+        // завдання з послідовністью рядків
+        let x = 6;
+        let y = 14;
+        let z = 4;
+
+        console.log("Початкові значення: x =", x, ", y =", y, ", z =", z);
+        
+        // x += y - x++ * z
+        // спершу буде x++ * z, 6*4=24 
+        let tempX = x;
+        let product = tempX * z; 
+
+        console.log("tempX =", tempX);
+        console.log("product =", product);
+
+        // після обчислення х++ значення збільшується на одиницю і стає вже 7.
+        console.log("Після x++: x=", x);
+
+        // потім йде вираз y - x++ * z, 14 - 24 = -10
+        let result = y - product; 
+
+        console.log("result =", result);
+        // потім йде присвоєння з додаванням
+        x += result;
+        
+        console.log("Після x += y - x++ * z: x", x);
+        // x = 7 + (-10) = -3;
+    </script>
+</body>
+</html>

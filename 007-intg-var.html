@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergrtion JS</title>
+</head>
+<body>
+    <script>
+        // завдання з послідовністью рядків
+        let x = 6;
+        let y = 14;
+        let z = 4;
+        
+        // z = --x - y * 5
+        // спочатку --x стає x
+        console.log("Після --x стає x", x);
+
+        // потім буде y * 5; 14 * 5 = 70
+        let product = y * 5;
+
+        console.log("product (y * 5) =", product);
+
+        // потім ми виконуємо вираз --x - y * 5; 5 - 70 = -65
+        let result = --x - y * 5;
+
+        console.log("result (--x - y * 5) =", result);
+
+        // тепер присвоюємо значення z; -65
+        z = result;
+
+        console.log("Після присвоєння z =", z);
+    </script>
+</body>
+</html>
